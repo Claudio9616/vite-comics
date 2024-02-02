@@ -73,7 +73,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid blue;
+    padding: 12px 0;
+}
+
+img {
+    width: 80px;
 }
 
 header ul {
@@ -84,11 +88,7 @@ header ul {
     list-style-type: none;
 }
 
-
-
-a {
-    text-decoration: none;
-    color: white;
-    font-size: 2rem;
+ul li {
+    font-weight: bold;
 }
 </style>

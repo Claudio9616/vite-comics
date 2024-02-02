@@ -30,5 +30,6 @@ export default {
 
 body {
   height: 100vh;
+  font-family: 'Times New Roman', Times, sans-serif;
 }
 </style>
