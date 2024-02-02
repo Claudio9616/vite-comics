@@ -56,39 +56,32 @@ export default {
     })
 }
 </script>
-<!-- ricordati di fissare il link.url in un tag a -->
 <template>
-    <header class="container">
-        <img src="../assets/img/dc-logo.png" alt="">
-        <ul>
-            <li v-for="(link, i) in links" :key="i">
-                {{ link.text }}
-            </li>
-        </ul>
-    </header>
+    <footer>
+        <div class="row">
+            <!-- fare 4 ul più img -->
+        </div>
+    </footer>
 </template>
-
 <style scoped>
-header {
+footer {
+    height: 300px;
     display: flex;
     justify-content: space-between;
+    background-image: url(../assets/img/footer-bg.jpg);
+}
+
+.row {
+    display: flex;
+    border: 1px solid white;
+    flex-wrap: wrap;
     align-items: center;
-    border: 1px solid blue;
+    width: 266px;
 }
 
-header ul {
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1rem;
+ul {
     list-style-type: none;
-}
-
-
-
-a {
-    text-decoration: none;
     color: white;
-    font-size: 2rem;
+    margin: 30px;
 }
-</style>
+</style>   

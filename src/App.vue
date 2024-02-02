@@ -1,15 +1,19 @@
 <script>
+import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue'
+import AppMain from './components/AppMain.vue';
 export default {
   name: 'Second app .Vue',
   components: {
-    AppHeader
+    AppHeader, AppMain, AppFooter
   }
 }
 </script>
 
 <template>
   <AppHeader />
+  <AppMain />
+  <AppFooter />
 </template>
 
 <style>
@@ -22,5 +26,9 @@ export default {
 .container {
   width: 1200px;
   margin: 0 auto;
+}
+
+body {
+  height: 100vh;
 }
 </style>
