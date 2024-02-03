@@ -1,25 +1,41 @@
 <script>
 export default {
+    props: {
+        comics: Array
+    }
 }
 </script>
 <template>
     <main>
-        <a href="#">Content goes here</a>
+        <div class="container card-container">
+            <div class="comics-container" v-for="(comic, i) in comics" :key="i">
+                <img :src="comic.thumb" alt="">
+                <h4>{{ comic.series }}</h4>
+            </div>
+        </div>
     </main>
 </template>
 <style scoped>
 main {
     background-color: black;
-    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-    font-size: 2rem;
-    font-weight: 600;
+.card-container {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comics-container {
+    flex-basis: calc(100% / 6);
+    padding: 10px;
+}
+
+img {
+    width: 150px;
 }
 </style>
