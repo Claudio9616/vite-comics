@@ -1,59 +1,8 @@
 <script>
 export default {
-    data: () => ({
-        links: [
-            {
-                text: 'Characters',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Comics',
-                url: '#',
-                current: true,
-            },
-            {
-                text: 'Movies',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'TV',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Games',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Collectibles',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Videos',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Fans',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'News',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Shop',
-                url: '#',
-                current: false,
-            }
-        ]
-    })
+    props: {
+        links: Array
+    }
 }
 </script>
 <template>
@@ -117,88 +66,93 @@ export default {
         </div>
     </footer>
 </template>
-<style scoped>
+<style lang="scss" scoped>
 footer {
     background-image: url(../assets/img/footer-bg.jpg);
     background-size: contain;
-}
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 80px;
-    padding: 20px 0;
-    height: 425px;
-}
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 80px;
+        padding: 20px 0;
+        height: 425px;
 
-.content-footer-top {
-    display: flex;
-    flex-wrap: wrap;
-    width: 400px;
-    gap: 30px
-}
+        .content-footer-top {
+            display: flex;
+            flex-wrap: wrap;
+            width: 400px;
+            gap: 30px
+        }
 
-ul {
-    list-style-type: none;
-    color: white;
-    margin: 10px;
-}
 
-ul li:first-child {
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
+    }
 
-a {
-    text-decoration: none;
-    color: #959595;
-}
+    ul {
+        list-style-type: none;
+        color: white;
+        margin: 10px;
+    }
 
-.row img {
-    width: 425px;
-}
+    ul li:first-child {
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
 
-.footer-bot {
-    height: 100px;
-    background-color: #303030;
-    position: absolute;
-    right: 0;
-    left: 0;
-}
+    a {
+        text-decoration: none;
+        color: #959595;
+    }
 
-.content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
+    .row img {
+        width: 425px;
+    }
 
-button {
-    height: 50px;
-    background-color: #303030;
-    color: white;
-    border: 2px solid #0282F9;
-    padding: 15px;
-}
+    .footer-bot {
+        height: 100px;
+        background-color: #303030;
+        position: absolute;
+        right: 0;
+        left: 0;
 
-.icons ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
 
-.icons ul li {
-    margin: 0 10px;
-}
+            button {
+                height: 50px;
+                background-color: #303030;
+                color: white;
+                border: 2px solid #0282F9;
+                padding: 15px;
+            }
 
-.icons ul li:first-child {
-    color: #0282F9;
-}
+            .icons ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
-img {
-    width: 30px;
+                li {
+                    margin: 0 10px;
+
+                    &:first-child {
+                        color: #0282F9;
+                    }
+
+                    img {
+                        width: 30px;
+                    }
+                }
+            }
+        }
+
+
+    }
+
 }
 </style>   

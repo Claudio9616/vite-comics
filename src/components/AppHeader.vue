@@ -1,59 +1,8 @@
 <script>
 export default {
-    data: () => ({
-        links: [
-            {
-                text: 'Characters',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Comics',
-                url: '#',
-                current: true,
-            },
-            {
-                text: 'Movies',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'TV',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Games',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Collectibles',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Videos',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Fans',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'News',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Shop',
-                url: '#',
-                current: false,
-            }
-        ]
-    })
+    props: {
+        links: Array
+    }
 }
 </script>
 <!-- ricordati di fissare il link.url in un tag a -->
@@ -68,27 +17,28 @@ export default {
     </header>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px 0;
-}
 
-img {
-    width: 80px;
-}
+    img {
+        width: 80px;
+    }
 
-header ul {
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1rem;
-    list-style-type: none;
-}
+    ul {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+        list-style-type: none;
 
-ul li {
-    font-weight: bold;
+        li {
+            font-weight: bold;
+        }
+    }
+
 }
 </style>
